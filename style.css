@@ -12,6 +12,13 @@ body {
     src: url(undertaleFonts/8bitOperatorPlus-Bold.woff) format("opentype");
 }
 
+article {
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 568px;
+}
+
 img {
     display: block;
     margin-left: auto;
@@ -22,11 +29,14 @@ h1, h2, h3 {
     font-family: bold-font;
     text-align: center;
     margin: auto;
-    width: 30%;
 }
 
 h1, h2 {
     color: yellow;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 h3 {
@@ -37,11 +47,10 @@ p {
     color: whitesmoke;
     font-family: main-font;
     margin: auto;
-    width: 30%;
 }
 
-footer p {
-    width: 50%;
+footer {
+    max-width: 800px;
 }
 
 strong {
@@ -61,12 +70,6 @@ a:hover {
 
 a:visited {
     color: yellow;
-}
-
-#featuredEnemies {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
 }
 
 footer {

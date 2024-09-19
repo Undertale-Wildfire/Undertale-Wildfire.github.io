@@ -1,7 +1,6 @@
 .bioLeft, .bioRight {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
     display: flex;
 }
 
