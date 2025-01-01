@@ -1,5 +1,5 @@
 html {
-    cursor: url("orangeSoul.png"), auto;
+    cursor: url("images/soul.png"), auto;
 }
 
 body {
@@ -8,12 +8,12 @@ body {
 
 @font-face {
     font-family: main-font;
-    src: url(undertaleFonts/8bitOperatorPlus-Regular.woff) format("opentype");
+    src: url(fonts/8bitOperatorPlus-Regular.woff) format("opentype");
 }
 
 @font-face {
     font-family: bold-font;
-    src: url(undertaleFonts/8bitOperatorPlus-Bold.woff) format("opentype");
+    src: url(fonts/8bitOperatorPlus-Bold.woff) format("opentype");
 }
 
 article {
@@ -21,12 +21,6 @@ article {
     padding-left: 16px;
     padding-right: 16px;
     max-width: 568px;
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h1, h2, h3 {
@@ -72,8 +66,26 @@ a:visited {
     color: yellow;
 }
 
-footer {
+audio {
+    display: block;
     margin: auto;
+}
+
+.image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.caption {
+    font-family: "Times New Roman", serif;
+    text-align: center;
+}
+
+.musicTitle {
+    color: gray;
+    font-size: 0.875rem;
     text-align: center;
 }
 
