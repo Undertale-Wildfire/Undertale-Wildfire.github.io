@@ -38,11 +38,11 @@ h1 {
 }
 
 h3 {
-    color: whitesmoke;
+    color: white;
 }
 
 p {
-    color: whitesmoke;
+    color: white;
     font-family: main-font;
     margin: auto;
 }
@@ -72,7 +72,7 @@ audio {
 }
 
 .image {
-    color: whitesmoke;
+    color: white;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
