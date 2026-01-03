@@ -1,26 +1,35 @@
 html {
-    cursor: url("images/soul.png"), auto;
+    cursor: url("images/soul.png") 11 11, auto;
 }
 
 body {
+    margin-left: 0;
+    margin-right: 0;
     background-color: black;
 }
 
 @font-face {
     font-family: main-font;
-    src: url(fonts/8bitOperatorPlus-Regular.woff) format("opentype");
+    src: url(fonts/8bitOperatorPlus-Regular.woff) format("woff");
 }
 
 @font-face {
     font-family: bold-font;
-    src: url(fonts/8bitOperatorPlus-Bold.woff) format("opentype");
+    src: url(fonts/8bitOperatorPlus-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: dialogue-font;
+    src: url(fonts/8bitoperator-JVE-mono.woff) format("woff");
 }
 
 article {
+    width: min(600px, 100%);
+    box-sizing: border-box;
+
     margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: calc(600px - 2rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 h1, h2, h3 {
@@ -45,10 +54,10 @@ p {
     color: white;
     font-family: main-font;
     margin: auto;
+    line-height: 1.5;
 }
 
 strong {
-    color: orange;
     font-family: bold-font;
 }
 
@@ -71,33 +80,166 @@ audio {
     margin: auto;
 }
 
+.dim {
+    color: gray;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
 .image {
-    color: white;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    color: white;
+}
+
+.image.pixelated {
+    image-rendering: pixelated;
 }
 
 .caption {
-    font-family: "Times New Roman", serif;
-    text-align: center;
-}
-
-.musicTitle {
     color: gray;
     font-size: 0.875rem;
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
-    p {
-        width: 65%;
-    }
+.button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    display: inline-block;
+
+    border: 2px solid yellow;
+    padding: 10px;
+
+    color: yellow;
+    font-size: 18px;
+    text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-    p {
-        width: 90%;
-    }
+.dialogueBox {
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    --width: min(578px, 100vw - 3rem);
+
+    width: var(--width);
+    height: calc(var(--width) / 578 * 152);
+    box-sizing: border-box;
+
+    border: calc(var(--width) / 578 * 6) solid white;
+    margin-top: 1rem;
+    padding-top: calc(var(--width) / 578 * 12);
+    padding-left: calc(var(--width) / 578 * 22);
+}
+
+.dialogueBox.withFace {
+    padding-left: calc(var(--width) / 578 * 138);
+}
+
+.dialogueBox.noBorder {
+    border: calc(var(--width) / 578 * 6) solid transparent;
+}
+
+.dialogueBox p:before {
+    content: "* ";
+}
+
+.dialogueBox p {
+    padding: 0 0 0 2ch;
+    border: none;
+    margin: 0;
+
+    color: white;
+
+    font-family: dialogue-font;
+    font-size: calc(var(--width) / 578 * 32);
+
+    text-indent: -2ch;
+    max-width: calc(var(--width) / 578 * 480);
+    line-height: calc(var(--width) / 578 * 36);
+
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+
+    filter: contrast(100.00001%);
+}
+
+.dialogueBox.withFace p {
+    max-width: calc(var(--width) / 578 * 368);
+}
+
+.dialogueBox.withFace p.extraLineLength {
+    max-width: calc(var(--width) / 578 * 384);
+}
+
+.dialogueBox img {
+    position: absolute;
+    left: calc(var(--width) / 578 * 4);
+    top: calc(var(--width) / 578 * 5);
+    width: calc(var(--width) / 578 * 128);
+    image-rendering: pixelated;
+}
+
+.journalEntry {
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+    --width: min(576px, 100vw - 3rem);
+
+    width: var(--width);
+    height: calc(var(--width) / 576 * 412);
+
+    background-image: url("images/journal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.journalEntry p {
+    position: absolute;
+    top: calc(var(--width) / 576 * 22);
+
+    padding: 0;
+    border: none;
+    margin: 0;
+
+    color: #2d2d2d;
+
+    font-family: dialogue-font;
+    font-size: calc(var(--width) / 576 * 32);
+
+    max-width: 16ch;
+    line-height: calc(var(--width) / 576 * 32);
+
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+
+    filter: contrast(100.00001%);
+}
+
+.journalEntry p.left {
+    left: calc(var(--width) / 576 * 22);
+}
+
+.journalEntry p.right {
+    left: calc(var(--width) / 576 * 302);
 }

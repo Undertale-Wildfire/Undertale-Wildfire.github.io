@@ -1,3 +1,7 @@
+.orange {
+    color: orange;
+}
+
 .bioLeft, .bioRight {
     margin-left: auto;
     margin-right: auto;
@@ -30,8 +34,4 @@
     margin-left: 0;
     margin-right: 2em;
     text-align: right;
-}
-
-.dim {
-    color: gray;
 }
