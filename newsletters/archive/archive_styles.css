@@ -1,0 +1,22 @@
+.archive_list {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.archive_spacing {
+    font-size: 3em;
+}
+
+.newsletter_header {
+    color: yellow;
+    font-family: main-font;
+    text-align: center;
+    margin: auto;
+}
+
+.newsletter_subheader {
+    color: white;
+    font-family: main-font;
+    text-align: center;
+    margin: auto;
+}
