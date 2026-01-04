@@ -149,7 +149,7 @@ audio {
     border: calc(var(--width) / 578 * 6) solid transparent;
 }
 
-.dialogueBox p:before {
+.dialogueBox p::before {
     content: "* ";
 }
 
@@ -206,7 +206,7 @@ audio {
     height: calc(var(--width) / 576 * 412);
 }
 
-.journalEntry:before {
+.journalEntry::before {
     content: url("images/journal.png");
     image-rendering: pixelated;
 }
