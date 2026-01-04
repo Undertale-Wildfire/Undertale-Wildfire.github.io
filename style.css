@@ -23,7 +23,7 @@ body {
     src: url(fonts/8bitoperator-JVE-mono.woff) format("woff");
 }
 
-article {
+article, footer {
     width: min(600px, 100%);
     box-sizing: border-box;
 
