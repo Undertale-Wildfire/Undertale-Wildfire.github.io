@@ -243,3 +243,9 @@ audio {
 .journalEntry p.right {
     left: calc(var(--width) / 576 * 302);
 }
+
+footer {
+    color: gray;
+    font-size: 0.9rem;
+    text-align: center;
+}
