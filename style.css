@@ -204,10 +204,10 @@ audio {
 
     width: var(--width);
     height: calc(var(--width) / 576 * 412);
-}
 
-.journalEntry::before {
-    content: url("images/journal.png");
+    background-image: url("images/journal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
